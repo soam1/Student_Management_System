@@ -37,4 +37,20 @@ public class StudentServiceImpl implements StudentService {
 
     }
 
+    @Override
+    public Student updateStudent(Student student) {
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method
+        // 'updateStudent'");
+        return studentRepository.save(student);
+    }
+
+    @Override
+    public Student getStudentById(Long id) {
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method
+        // 'getStudentById'");
+        return studentRepository.findById(id).orElse(null);
+    }
+
 }
